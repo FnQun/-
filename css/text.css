@@ -1,0 +1,28 @@
+*{
+margin: 0;
+padding: 0;
+}
+body{
+	width: 100%;
+	height: 100%;
+}
+.headbar{
+		margin: 0 auto;
+}
+.headbar .logo,.atten,.m-nav{
+		display: inline-block;
+		padding-right: 54px;
+}
+.headbar .atten a{
+	display: inline-block;
+	width: 54px;
+	height: 22px;
+	padding-left:px;
+	text-align: center;
+	font: 12px/21px 宋体;
+	color: white;
+	background-color: rgb(33,165,87);
+	border-radius: 2px;
+	text-decoration: none;
+}
+
