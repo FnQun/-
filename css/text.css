@@ -1,28 +1,152 @@
-*{
-margin: 0;
-padding: 0;
+h1,h2,h3,div,ul,ol,li,dt,dd,input,frame,label,img,span,em,ul,li,a,i{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
 }
-body{
-	width: 100%;
-	height: 100%;
+.header{
+	background-color: white;
+	height: 22px;
+	width: 862px;
+	margin: 36px auto;
+
 }
-.headbar{
-		margin: 0 auto;
+.topbar .logo,.atten,.m-nav{
+	display: inline-block;
 }
-.headbar .logo,.atten,.m-nav{
-		display: inline-block;
-		padding-right: 54px;
-}
-.headbar .atten a{
+/*atten start*/
+ .topbar .atten a{
 	display: inline-block;
 	width: 54px;
-	height: 22px;
-	padding-left:px;
-	text-align: center;
-	font: 12px/21px 宋体;
-	color: white;
-	background-color: rgb(33,165,87);
+	height: 21px;
+	margin-right: 14px;
+	background: url(../images/ico.png) rgb(33,165,87);
 	border-radius: 2px;
+}
+.atten a:hover{
+	background-color: rgb(47,181,86);
+}
+.atten span,em{
+	display: inline-block;
+	font: 12px/21px simsun;
+	vertical-align: top;
+}
+/*atten end*/
+/*nav start*/
+.m-nav{
+	display: inline-block;
+	margin-left: 92px;
+}
+.m-nav li{
+	float: right;
+	list-style: none;
+}
+.m-nav li+li{
+	padding-right: 54px;
+}
+.m-nav .search{
+	width: 19px;
+	height: 19px;
+	position: relative;
+	z-index: 300;
+	margin-left: -24px;
+	background: url(../images/ico.png) no-repeat -102px 0px;
+}
+.m-nav .search:hover{
+	background: url(../images/ico.png) no-repeat -126px 0;
+}
+.m-nav a{
 	text-decoration: none;
+	color: black;
+	font: 16px 'HiraginoSansGB W3';
+}
+.m-nav a:hover{
+	color: rgb(57,160,48);
+};
+
+/*nav end*/
+/*banner start*/
+.m-banner{
+	height: 462px;
 }
 
+/*banner end*/
+/*navinfo start*/
+.m-navinfo{
+	width: 1194px;
+	height: 300px;
+	margin: 0 auto;
+}
+.m-navinfo>div{
+	width: 340px;
+	height: 178px;
+}
+.m-navinfo div{
+	float: left;
+}
+.m-navinfo>div+div{
+	margin-left: 84px;
+}
+.m-navinfo .logo{
+	width: 82px;
+	height: 82px;
+	margin: 6px 18px 0 0;
+}
+.op .logo{
+	background: url(../images/ico.png) no-repeat 0px -21px;
+}
+.csroom .logo{
+	background: url(../images/ico.png) no-repeat -80px -21px;
+}
+.cnmooc .logo{
+	background: url(../images/ico.png) no-repeat -162px -21px;
+}
+.m-navinfo .logo+div{
+	width: 240px;
+	height: 174px;
+	font: 14px Microsoft YaHei;
+}
+.m-navinfo h2{
+	font-size: 22px;
+}
+.m-navinfo p{
+	text-align: justify;
+}
+.m-navinfo a{
+	color: rgb(57,160,48);
+	text-decoration: none;
+}
+.m-navinfo a:hover{
+	text-decoration: underline;
+}
+/*nav-info end*/
+
+
+/*footer start*/
+.footer{
+	height: 260px;
+	font: 13px Microsoft YaHei;
+	color: rgb(176,178,179);
+	background-color: rgb(44,51,57);
+}
+.footer>div{
+	display: inline-block;
+	float: left;
+}
+.footer .copyright{
+	width: 394px;
+	height: 88px;
+	margin-top: 92px;
+	margin-left: 256px;
+}
+.copyright .foot-logo{
+	width: 236px;
+	height: 50px;
+	background: url(../images/ico.png) no-repeat 0 -104px;
+}
+
+.footer li{
+	list-style: none;
+}
