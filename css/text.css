@@ -126,18 +126,14 @@ h1,h2,h3,div,ul,ol,li,dt,dd,input,frame,label,img,span,em,ul,li,a,i{
 
 /*envir start*/
 .envir{
-	width: 1616px;
-	height: 222px;
+	margin-left: -4px;
 
 }
 .envir img{
 	float: left;
-	margin-left: 4px;
-	width: 320px;
-	height: 220px;
-}
-.envir img:first-child{
-	margin-left: 0;
+	width: 20%;
+	padding-left: 4px;
+	box-sizing: border-box;
 }
 /*footer start*/
 .footer{
