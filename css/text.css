@@ -1,3 +1,4 @@
+/*reset*/
 h1,h2,h3,div,ul,ol,li,dt,dd,input,frame,label,img,span,em,ul,li,a,i{
     margin: 0;
     padding: 0;
@@ -123,30 +124,72 @@ h1,h2,h3,div,ul,ol,li,dt,dd,input,frame,label,img,span,em,ul,li,a,i{
 }
 /*nav-info end*/
 
+/*envir start*/
+.envir{
+	width: 1616px;
+	height: 222px;
 
+}
+.envir img{
+	float: left;
+	margin-left: 4px;
+	width: 320px;
+	height: 220px;
+}
+.envir img:first-child{
+	margin-left: 0;
+}
 /*footer start*/
 .footer{
+	width: 100%;
 	height: 260px;
-	font: 13px Microsoft YaHei;
+	display: table;
+	vertical-align: middle;
+	text-align: center;
+	font: 12px Microsoft YaHei;
 	color: rgb(176,178,179);
 	background-color: rgb(44,51,57);
 }
-.footer>div{
-	display: inline-block;
-	float: left;
-}
+
 .footer .copyright{
+	display: inline-block;
 	width: 394px;
 	height: 88px;
-	margin-top: 92px;
-	margin-left: 256px;
+	text-align: left;
+	margin-right: 150px;
 }
 .copyright .foot-logo{
-	width: 236px;
-	height: 50px;
+	width: 234px;
+	height: 20px;
+	margin-bottom: 30px;
 	background: url(../images/ico.png) no-repeat 0 -104px;
 }
-
+.copyright span{
+	white-space:nowrap;
+	}
+.footer-link{
+	display: inline-block;
+	margin-top: 92px
+}
+.footer-link ul{
+	float: left;
+	text-align: left;
+	margin-right: 80px;
+}
 .footer li{
+	padding-top:10px;
 	list-style: none;
 }
+.footer a{
+	text-decoration: none;
+	font-size: 15px;
+	color: rgb(176,178,179);
+}
+.footer a:hover{
+	text-decoration: underline;
+}
+.contact img{
+	vertical-align: middle;
+	padding-left: 10px;
+}
+/*footer end*/
