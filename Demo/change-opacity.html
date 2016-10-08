@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hover改变图片透明度</title>
+	<style>
+	p{
+		text-align: center;
+		color: green;
+		font: 18px bold consolas;
+	}
+	div{
+		border: 1px solid #fc0;
+		border-radius: 20px;
+	}
+	li{
+		display: inline-block;
+		cursor: pointer;
+	}
+	.g-op img:hover{opacity: 0.6;}/*Hover改变图片透明度*/
+	#m-jsop li.current img{opacity:0.4;}/*JS-dom 改变图片透明度*/
+	</style>
+	<script>
+	window.onload = function (){
+		var oDiv = document.getElementById('m-jsop');
+		var oLi = oDiv.getElementsByTagName("li");
+		for (var i = 0;i <oLi.length; i++) {
+			// 方案一：
+			// oLi[i].onmouseover = function ()
+			// {
+			// 	this.className = "current";
+			// }
+			// oLi[i].onmouseout = function ()
+			// {
+			// 	this.className = "";
+			// }
+			//方案二：
+			oLi[i].onmouseover = function ()
+			{
+				this.style.opacity = "0.5";
+			}
+			oLi[i].onmouseout = function ()
+			{
+				this.style.opacity = "1";
+			}
+		};
+	}
+	</script>
+</head>
+<body>
+	<p>CSS-hover实现鼠标移入透明改变</p>
+	<div id="m-op">
+		<ul class="g-op">
+			<li><img src="../images/demo1.jpeg" alt=""></li>
+			<li><img src="../images/demo2.jpeg" alt=""></li>
+			<li><img src="../images/demo3.jpeg" alt=""></li>
+			<li><img src="../images/demo4.jpeg" alt=""></li>
+			<li><img src="../images/demo5.jpeg" alt=""></li>
+			<li><img src="../images/demo6.jpeg" alt=""></li>
+		</ul>
+	</div>
+<p>JS-dom实现鼠标移入透明改变</p>
+	<div id="m-jsop">
+		<ul class="g-jsop">
+			<li><img src="../images/demo1.jpeg" alt=""></li>
+			<li><img src="../images/demo2.jpeg" alt=""></li>
+			<li><img src="../images/demo3.jpeg" alt=""></li>
+			<li><img src="../images/demo4.jpeg" alt=""></li>
+			<li><img src="../images/demo5.jpeg" alt=""></li>
+			<li><img src="../images/demo6.jpeg" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>
