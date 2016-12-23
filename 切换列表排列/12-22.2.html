@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>切换列表排列</title>
+    <link rel="stylesheet" href="../styles_list.css">
+</head>
+<body>
+     <div class="btn" id='btn'>
+            <button id='btnl'>列</button>
+            <button id='btnr'>格</button>
+    </div>
+    <div class="g-cen">
+        <ul class="list">
+            <li>
+                <img src="img/demo1.jpg" alt="">
+                <a href="#">秦露为霜</a>
+                <p>广州</p>
+                <p>21个共同好友</p>
+                <button>未分组的好友</button>
+            </li>
+            <li>
+                <img src="img/demo2.jpg" alt="">
+                <a href="#">秦露为霜</a>
+                <p>广州</p>
+                <p>21个共同好友</p>
+                <button>未分组的好友</button>
+            </li>
+            <li>
+                <img src="img/demo3.jpg" alt="">
+                <a href="#">秦露为霜</a>
+                <p>广州</p>
+                <p>21个共同好友</p>
+                <button>未分组的好友</button>
+            </li>
+            <li>
+                <img src="img/demo4.jpg" alt="">
+                <a href="#">秦露为霜</a>
+                <p>广州</p>
+                <p>21个共同好友</p>
+                <button>未分组的好友</button>
+            </li>
+            <li>
+                <img src="img/demo5.jpg" alt="">
+                <a href="#">秦露为霜</a>
+                <p>广州</p>
+                <p>21个共同好友</p>
+                <button>未分组的好友</button>
+            </li>
+            <li>
+                <img src="img/demo6.jpg" alt="img">
+                <a href="#">秦露为霜</a>
+                <p>广州</p>
+                <p>21个共同好友</p>
+                <button>未分组的好友</button>
+            </li>
+        </ul>
+    </div>
+<script>
+    var btnl = document.getElementById('btnl'),
+        btnr = document.getElementById('btnr');
+    var x = document.getElementsByTagName('link');
+    function createStyleSheetl(){
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = '../styles_list.css';
+                document.getElementsByTagName('head')[0].appendChild(link);
+            }
+    function createStyleSheetr(){
+            var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = '../styles.css';
+                document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    btnl.addEventListener("click",createStyleSheetl);
+    btnr.addEventListener("click",createStyleSheetr);
+
+
+
+
+
+</script>
+</body>
+</html>

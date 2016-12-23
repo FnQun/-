@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.g-cen{
+    margin: 0 auto;
+    width: 615px;
+    height: 450px;
+}
+.btn{
+    height: 30px;
+}
+.btn button{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: 3px solid;
+    background: #fc0;
+}
+.list>li{
+    float: left;
+    padding-left: 5px;
+    margin-top: 5px;
+}
+.list img{
+    width: 200px;
+    height: 160px;
+}
+.list img,a,p{
+    display: block;
+    float: none;
+    text-decoration: none;
+    font: 15px consolas;
+}
+.list li button{
+    display: block;
+    width: 200px;
+    height: 30px;
+    border: 2px solid #cdf;
+}
