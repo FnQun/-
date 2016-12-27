@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三级菜单</title>
+    <style>
+    body{
+        background: #ddd;
+    }
+    .nav-one{
+        margin: 0 auto;
+        width: 800px;
+    }
+     li {
+        width: 100px;
+        padding: 8px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 10px;
+        background: #565 no-repeat;
+        color: white;
+        list-style: none;
+        box-shadow: 2px 2px 4px #888;
+        -webkit-transition: all 0.3s Linear;
+}
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    a:hover{
+        text-decoration: underline;
+        color: green;
+    }
+    .nav-one{
+        position: relative;
+    }
+    .nav-two,.nav-three{
+        position: absolute;
+        left: 110px;
+        display: none;
+    }
+
+    li:hover{
+        display: block;
+        padding-left: 20px;
+        background-color: #ebebeb;
+        color: #000;
+    }
+    li:hover > ul{
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    <ul class="nav-one">
+        <li>Coding</li>
+        <li>Design
+            <ul class="nav-two">
+                    <li>web design</li>
+                    <li>UX design
+                        <ul class="nav-three">
+                            <li>UA desian</li>
+                            <li>UI design</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        <li>About
+            <ul class="nav-three">
+                <li><a href="#">Demo</a></li>
+                <li><a href="#">Just use CSS</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

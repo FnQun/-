@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>div操作</title>
+    <style>
+    form{
+        text-align: center;
+}
+    form input{
+        border: 2px solid #f93;
+}
+    .changebox{
+        margin: 20px auto;
+        height: 100px;
+        width: 100px;
+        border-radius: 3px;
+        background: #555;
+}
+    </style>
+</head>
+<body>
+    <form id="con">
+        <input name="cntrl" type="button" value="加宽" />
+        <input name="cntrl" type="button" value="加高" />
+        <input name="cntrl" type="button" value="变色" />
+        <input name="cntrl" type="button" value="重置" />
+    </form>
+    <div class="changebox" id="changebox"></div>
+
+    <script>
+    // 按钮
+        var oBtn = document.getElementsByName('cntrl');
+        var oDiv = document.getElementById('changebox');
+        var sty = ["width",'height','background','cssText'];
+        var RandomColor = function(){
+            return  '#' +(function(color){
+            return (color +=  '0123456789abcdef'[Math.floor(Math.random()*16)])
+              && (color.length == 6) ?  color : arguments.callee(color);
+          })('');
+        };
+    // 改变CSS
+        for (var i=0;i<oBtn.length;i++){
+            oBtn[i].index = i;
+            oBtn[i].onclick=function(){
+                switch (this.index){
+                    case 0 :
+                    oDiv.style[sty[this.index]] = oDiv.offsetWidth+12+ "px";
+                    break;
+                    case 1:
+                    oDiv.style[sty[this.index]] = oDiv.offsetHeight+12+ "px";
+                    case 2:
+                    oDiv.style[sty[this.index]] = RandomColor();
+                    break;
+                    case 3:
+                    oDiv.style[sty[this.index]] ='';
+                    break;
+                }
+                }
+            };
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  li{
+    width: 100px;
+    height: 25px;
+    border: 2px solid #458B00;
+    margin-bottom: 1px;
+    border-radius: 8px;
+    list-style: none;
+  }
+  li:hover{
+    background: #ddd;
+  }
+  a{
+  text-decoration: none;
+  color: black;
+  font: 18px/18px courier;
+  }
+  a:hover{
+    color: green;
+  }
+  .nav1{
+    position: relative;
+  }
+  .nav2,.nav3{
+    position: absolute;
+    left: 105px;
+    margin-top: -20px;
+    display: none;
+  }
+  </style>
+
+  </head>
+  <body>
+  <div >
+    <ul class="nav1" id="ad">
+      <li><a href="#" >one</a></li>
+      <li>
+        <a href="#">one</a>
+        <ul class="nav2">
+          <li><a href="#">two</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="">one</a>
+        <ul class="nav2">
+          <li><a href="#">two</a></li>
+          <li>
+             <a href="#">two</a>
+             <ul class="nav3">
+                <li><a href="#">three</a></li>
+                <li><a href="#">three</a></li>
+                <li><a href="#">three</a></li>
+              </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+    <script>
+  var buildnav = function () {
+      var Oul = document.getElementById("ad").getElementsByTagName("ul");
+      for (var j = 0; j < Oul.length; j++) {
+        Oul[j].parentNode.onmouseover = function() {
+          this.getElementsByTagName("ul")[0].style.display = "block";
+        }
+        Oul[j].parentNode.onmouseout = function() {
+          this.getElementsByTagName("ul")[0].style.display = "none";
+        }
+      }
+    };
+
+  if (window.addEventListener){
+    window.addEventListener("load", buildnav, false);
+  }else{
+    window.attachEvent("onload", buildnav);
+  };
+  </script>
+  </body>
+  </html>
