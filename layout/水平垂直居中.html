@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平垂直居中</title>
+    <style>
+.parent{
+    height: 1000px;
+    width: 1000px;
+    text-align: center;
+    display: table-cell;
+    vertical-align:middle;
+    background: #aaa;
+}
+.child{
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    background:blue;
+}
+    </style>
+</head>
+<body>
+    <div class="parent">table-cell 不支持百分比宽高!
+        <div class="child">
+        </div>
+    </div>
+</body>
+</html>
