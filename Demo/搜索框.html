@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Search</title>
+</head>
+<style>
+    .search-toolbar{
+        width: 300px;
+        height: 30px;
+        border: 1px solid #aaa;
+        background: #ddd;
+    }
+    .search-input,.search-submit{
+        border: 0;
+        height: 28px;
+        margin: 0;
+    }
+    .search-input{
+        width: 250px;
+    }
+</style>
+<body>
+    <div class="search-toolbar">
+        <form action="http://cn.bing.com/search?q=%s" target="_blank" method="get" accept-charset="utf-8">
+                <input class="search-input" type="text" name
+                ="q"/>
+                <input class="search-submit" type="submit" value="提交"/>
+        </form>
+    </div>
+    <!-- name 规定识别表单的名称（对于 DOM 使用：document.forms.name） 如果没有name值表单就不能被正确的提交,填写的name值错误 bing也不能正确的接受数据(后台先约定好的)-->
+</body>
+</html>
