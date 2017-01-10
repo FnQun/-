@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幽灵按钮</title>
+    <style>
+    .m-botton{
+    position: relative;
+    margin: 100px auto;
+    width: 134px;
+    height: 50px;
+    border: 2px solid;
+    background: white;
+    color: #2dcb70;
+    }
+    p{
+        text-align: center;
+        font: 18px/18px consolas;
+        font-weight: bold;
+    }
+    .top,.bottom,.left,.right{
+        position: absolute;
+        background: red;
+        transition: 0.3s ease;
+        /*linear    匀速（cubic-bezier(0,0,1,1)）
+        ease        慢速开始，然后变快，最后慢速结束（cubic-bezier(0.25,0.1,0.25,1)
+        ease-in     慢速开始（cubic-bezier(0.42,0,1,1)）
+        ease-out    慢速结束（cubic-bezier(0,0,0.58,1)）
+        ease-in-out 慢速开始和结束（cubic-bezier(0.42,0,0.58,1)）
+        cubic-bezier(n,n,n,n)*/
+    }
+    .top{
+        left: -2px;
+        top: -50px;
+        height: 0px;
+        width: 2px;
+    }
+        .bottom{
+        right: -2px;
+        bottom: -50px;
+        width: 2px;
+        height: 0px;
+    }
+        .left{
+        top: -2px;
+        left: -134px;
+        width: 0px;
+        height: 2px;
+    }
+        .right{
+        bottom: -2px;
+        right: -134px;
+        width: 0px;
+        height: 2px;
+    }
+    .m-botton:hover .top{
+        height: 50px;
+        top:0;
+    }
+        .m-botton:hover .bottom{
+        height: 50px;
+        bottom:0;
+    }
+        .m-botton:hover .left{
+        width: 134px;
+        left:0;
+    }
+        .m-botton:hover .right{
+        width: 134px;
+        right:0;
+    }
+    </style>
+</head>
+<body>
+    <div class="g-box">
+        <div class="m-botton">
+                <p>Ghost Buttons</p>
+                <i class="top"></i>
+                <i class="bottom"></i>
+                <i class="left"></i>
+                <i class="right"></i>
+        </div>
+    </div>
+    <!-- 1.transition hover改变的属性必须一一对应,要不然过渡达不到想要的效果.
+         2.hover效果是对称的,进入-退出均有动效!
+     -->
+</body>
+</html>
