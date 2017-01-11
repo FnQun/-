@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    *{margin:0;
+     padding:0;
+     font-size:13px;
+     list-style:none;}
+
+.menu{width:210px;
+      margin:50px auto;
+      border:1px solid #ccc;}
+
+.menu p{height:25px;
+        line-height:25px;
+        font-weight:bold;
+        background:#aaa;
+        border-bottom:1px solid #ccc;
+        cursor:pointer;
+        padding-left:5px;}
+
+.menu div ul{display:none;}
+
+.menu li{height:24px;
+         line-height:24px;
+         padding-left:5px;
+        border: 1px solid #eee;
+        transition: 0.4s ease-in;
+     }
+.menu ul li:hover{
+        background: #555;
+        color: #2dc555;
+     }
+</style>
+    <script type="text/javascript">
+    function $(id){
+        return document.getElementById(id);
+    }
+     window.onload=function(){
+        var tt = $('menu').getElementsByTagName('div');
+        var ti =$('menu').getElementsByTagName('ul');
+    // 将所有点击的标题和要显示隐藏的列表取出来
+                for(i=0;i<tt.length;i++){
+            // 遍历所有要点击的标题且给它们添加索引及绑定事件
+
+                    tt[i].index=i;// 获取点击的标题上的索引属性;
+
+                    tt[i].onclick=function(){
+                            for (var j = ti.length - 1; j >= 0; j--) {
+                                ti[j].style.display = "";
+                                // 遍历节点全部隐藏**
+                            };
+                           ti[this.index].style.display="block" // 点击显示**
+
+                       }
+                    //    tt[i].onmouseover = function (){
+                    //     ti[this.index].style.display="block";
+                    //    }
+                        // 鼠标移入移出事件
+                    //     tt[i].onmouseleave = function (){
+                    //     ti[this.index].style.display="";
+                    //    }
+                    }
+                }
+    </script>
+</head>
+<body>
+    <div class="menu" id="menu">
+        <div>
+            <p>Web前端</p>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+        <div>
+            <p>后台脚本</p>
+            <ul>
+                <li>PHP</li>
+                <li>ASP.net</li>
+                <li>JSP</li>
+            </ul>
+        </div>
+        <div>
+            <p>前端框架</p>
+            <ul>
+                <li>Vue.js</li>
+                <li>React</li>
+                <li>Sass</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
