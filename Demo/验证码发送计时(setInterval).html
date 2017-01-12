@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    window.onload=function(){
+        var send=document.getElementById('send'),
+           times=3,
+           timer=null;
+        function autoplay(){
+                send.value = times + "秒后重试";
+                send.disabled = true;
+                times--;
+                if(times<0){
+                    clearInterval(timer);
+                    send.value = "发送验证码";
+                    send.disabled = false;
+                    times = 3;
+                    // 不重置times times就 ===0;不变了!
+                    }
+                }
+        send.onclick=function(){
+                timer = setInterval(autoplay,1000);
+                    }
+    }
+// 疑问:
+// 函数能不能调用自身?
+// 在setInterval(funcName,1000);funcName后接();为什么不能周期性执行? (函数作用域?)
+
+// 体会 : 函数就近声明,尽可能先声明后再调用函数!
+ // 函数作用域 !important
+
+    </script>
+</head>
+<body>
+    <input type="button" id="send" value="发送验证码">
+</body>
+</html>
