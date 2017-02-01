@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>实现一个下拉菜单</title>
+    <style type="text/css">
+    *{
+        margin:0;
+        padding: 0;
+    }
+    div{
+        margin: 0 auto;
+    }
+    .sabar{
+        font: 12px "宋体";
+        position: relative;
+    }
+     .sabar>li{
+        float: left;
+        width: 50px;
+        height: 28px;
+        line-height: 28px;
+        border: 1px solid #ddd;
+        list-style: none;
+        background-color: #eee;
+    }
+    .sabar li ul li{
+        height: 30px;
+        line-height: 30px;
+        background-color: white;
+        padding: 0 10px;
+        border: 1px solid #ddd;
+    }
+    .sabar li ul{
+        position: absolute;
+        left: 0px;
+        top: 31px;
+        display: none;
+    }
+    .sabar li:hover ul{
+        display: block;
+    }
+    .sabar li ul li:hover{
+        background-color: #ddd;
+    }
+    </style>
+</head>
+<body>
+<div>
+    <ul class="sabar">
+        <li>一级菜单
+            <ul>
+                <li>下拉菜单选项</li>
+                <li>下拉菜单选项</li>
+                <li>下拉菜单选项</li>
+                <li>下拉菜单选项</li>
+            </ul>
+        </li>
+        <li>一级菜单</li>
+        <li>一级菜单</li>
+        <li>一级菜单</li>
+        <li>一级菜单</li>
+    </ul>
+</div>
+</body>
+</html>
