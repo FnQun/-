@@ -22,3 +22,19 @@ return htmlStr;
 }
 var a = escapeHTML('<input type="text" name="mobile">');
 alert(a);
+
+//高级用法//bd
+function escapeHTML(htmlStr) {
+escape = htmlStr.replace(/(\<|\>|\&|\")/g, function($0, $1) {
+    return {
+        "\<": "&lt;"
+        , "\>": "&gt;"
+        , "\&": "&amp;"
+        ,"\"": "&quot;"
+    }[$1];
+});
+    alert(escape);
+}
+escapeHTML('<input type="text" name="mobile"> ')
+console.log(escape);
+//&lt;input type=&quot;text&quot; name=&quot;mobile&quot;&gt; 
