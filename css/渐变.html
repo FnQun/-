@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>线性渐变</title>
+	<style>
+	.top-3{background-image:linear-gradient(90deg,white,black);}
+	.deg0{background-image:linear-gradient(0deg,white,black);}
+	.deg45{ background-image:linear-gradient(45deg,white,black);}
+	.deg90{ background-image:linear-gradient(90deg,white,black);}
+	.edg135{ background-image:linear-gradient(135deg,white,black);}
+	.deg180{ background-image:linear-gradient(180deg,white,black);}
+	.deg225{ background-image:linear-gradient(225deg,white,black);}
+	.deg270{ background-image:linear-gradient(270deg,white,black);}
+	.deg315{ background-image:linear-gradient(315deg,white,black);}
+	div {
+		width: 150px;
+		height: 150px;
+		border: 1px solid #666;
+		line-height: 30px;
+		text-align: center;
+		font-weight: 600;
+		font-size: 20px;
+		color: #CD0000;
+		margin: 5px;
+		float:left;
+	}
+	p{
+		font:30px bold;
+		color: #4876FF;
+		clear:both;
+	}
+	div:nth-child(3n+1){clear:left}
+	/*向左上角渐变*/
+	.toTopLeft {background-image:linear-gradient(to top left,orange,green);}
+	.toLeftTop {background-image:linear-gradient(to left top,orange,green);}
+	/*向右上角渐变*/
+	.toTopRight{background-image:linear-gradient(to top right,orange,green);}
+	.toRightTop {background-image:linear-gradient(to right top,orange,green);}
+	/*向左下角渐变*/
+	.toBottomLeft {background-image:linear-gradient(to bottom left,orange,green);}
+	.toLeftBottom {background-image:linear-gradient(to left bottom,orange,green);}
+	/*向右下角渐变*/
+	.toBottomRight {background-image:linear-gradient(to bottom right,orange,green);}
+	.toRightBottom {background-image:linear-gradient(to right bottom,orange,green);}
+	.top-1{
+		background-image:linear-gradient(to top right,orange,green);
+		height: 250px;
+		width: 1500px;
+	}
+	.top-2{
+		background-image:linear-gradient(45deg,orange,green);
+		height: 250px;
+		width: 1500px;
+	}
+	</style>
+</head>
+<body>
+	<div class="deg315">315deg</div>
+	<div class="deg0">0deg</div>
+	<div class="deg45">45deg</div>
+	<div class="deg270">270deg</div>
+	<div style="color:red;">原点</div>
+	<div class="deg90">90deg</div>
+	<div class="deg225">225deg</div>
+	<div class="deg180">180deg</div>
+	<div class="edg135">135deg</div>
+	<p>1.用角度正上方是0°右边是90°顺时针转</p>
+	<div class="toTopLeft">使用关键词：to Top Left</div>
+	<div class="toLeftTop">使用关键词：to Left Top</div>
+	<div class="toTopRight">使用关键词：to Top Right</div>
+	<div class="toRightTop">使用关键词：to Right Top</div>
+	<div>空</div>
+	<div class="toBottomLeft">使用关键词：to Bottom Left</div>
+	<div class="toLeftBottom">使用关键词：to Left Bottom</div>
+	<div>空</div>
+	<div class="toBottomRight">使用关键词：to Bottom Right</div>
+	<div class="toRightBottom">使用关键词：to Right Bottom</div>
+	<p>2.用关键词表示关键词可以交换</p>
+	<div class="top-1">探究关键字和角度的区别,这是关键字</div>
+	<div class="top-2">探究关键字和角度的区别,这是角度</div>
+	<p>3.用关键词和用角度渲染效果不一样</p>
+</body>
+</html>
