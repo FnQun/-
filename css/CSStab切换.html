@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tab</title>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+		font: 14px "微软雅黑";
+	}
+	h1,p{
+		text-align: center;
+	}
+	.box{
+		box-sizing: border-box;
+		height: 300px;
+		width: 574px;
+		margin: 0 auto;
+		border: 1px solid #999;
+	}
+	.nav{
+		height: 34px;
+		width: 572px;
+		text-align: center;
+	}
+	.nav li{
+		float: left;
+		list-style: none;
+		background-color: #f1f1f1;
+		border-bottom: 1px solid #cecece;
+	}
+	.nav li:nth-child(2){
+			border: 1px solid #cecece;
+			border-top:0px;
+	}
+	.nav li a{
+		height: 33px;
+		width: 190px;
+		line-height: 33px;
+		display:inline-block;
+		text-decoration: none;
+		color: #cecece;
+	}
+	.content{
+		height: 263px;
+		width: 572px;
+		overflow: hidden;
+		background-color: white;
+	}
+	.content div{
+		height: 232px;
+		width: 532px;
+		padding: 20px;
+	}
+	.nav li a:hover,.nav li:hover{
+		color: black;
+		background-color: white;
+		border-bottom:transparent;
+	}
+	</style>
+</head>
+<body>
+	<h1>CSS Tabs</h1>
+	<p>只有IE支持a标签的4中伪类的状态,chrome和Firefox仅支持两种</p>
+<div class="box">
+	<ul class="nav">
+    	<li><a href="#tab1">课程</a></li>
+        <li><a href="#tab2">学习计划</a></li>
+        <li><a href="#tab3">技能图谱</a></li>
+    </ul>
+    <div class="content">
+    	<div id="tab1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis adipiscing risus, porttitor viverra urna condimentum et. Donec vestibulum lacus vel dolor dictum pellentesque. Aliquam sodales sem quis urna condimentum, sit amet elementum magna semper.</div>
+        <div id="tab2">Aliquam condimentum hendrerit nisi, nec vestibulum mi feugiat ut. Donec lobortis nisi neque, in egestas eros venenatis eu. Vestibulum nulla nisi, venenatis at pretium id, fermentum quis risus. Quisque porta suscipit neque eu placerat. Etiam scelerisque, quam in sodales iaculis, velit velit mattis nunc, quis dapibus massa elit nec enim. Vivamus quis libero aliquam, volutpat nisl sed, consectetur ante. Donec aliquam semper felis, in placerat leo blandit in. Integer interdum elit quis felis tempor venenatis. In faucibus ac mauris id commodo. </div>
+        <div id="tab3">Fusce pulvinar porttitor dui, eget ultrices nulla tincidunt vel. Suspendisse faucibus lacinia tellus, et viverra ligula. Suspendisse eget ipsum auctor, congue metus vel, dictum erat. Aenean tristique euismod molestie. Nulla rutrum accumsan nisl, ac semper sapien tincidunt et. Praesent tortor risus, commodo et sagittis nec, aliquam quis augue. Aenean non elit elementum, tempor metus at, aliquam felis.</div>
+    </div>
+</div>
+</body>
+</html>
